@@ -2,9 +2,7 @@
 
 /**
   * main - Entry point
-  *
-  * Description: 'Print sizes of various data types'
-  *
+  * Description: Print sizes of various data types
   *Return: Always 0
   */
 int main(void)
