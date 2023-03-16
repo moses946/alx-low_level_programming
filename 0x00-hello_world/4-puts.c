@@ -3,6 +3,10 @@
 
 /*
    * main function - Prints a string using puts
+   *
+   *Description: 'Prints a string using puts'
+   *
+   *Return: Always 0
    */
 int main(void)
 {

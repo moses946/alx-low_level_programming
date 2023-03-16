@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 /**
-  * main function - Prints sizes of various datatypes
+  * main - Entry point
+  *
+  * Description: 'Print sizes of various data types'
+  *
+  *Return: Always 0
   */
 int main(void)
 {
