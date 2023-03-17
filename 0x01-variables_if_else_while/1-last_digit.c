@@ -28,10 +28,10 @@ int main(void)
 	strcpy(o, "and is less than 6 and is not 0");
 	j = n % 10;
 	if (j > 5)
-		printf("Last digit of %d is %.0f %s\n", n, j, m);
+		printf("Last digit of %d is %d %s\n", n, j, m);
 	else if (j == 0)
-		printf("Last digit of %d is %.0f %s\n", n, j, l);
+		printf("Last digit of %d is %d %s\n", n, j, l);
 	else
-		printf("Last digit of %d is %.0f %s\n", n, j, o);
+		printf("Last digit of %d is %d %s\n", n, j, o);
 	return (0);
 }

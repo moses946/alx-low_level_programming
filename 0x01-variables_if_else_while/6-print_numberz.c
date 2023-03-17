@@ -2,15 +2,15 @@
 
 /**
   * main - Entry point
-  * Description - Print all single digit numbers in base 10 using getchar
+  * Description  - Print all single digit numbers of base 10
   * Return: Always 0 (success)
   */
 int main(void)
 {
-	int c;
+	int i;
 
-	for (c = 48; c <= 57; c++)
-		putchar(c);
+	for (i = 48; i <= 57; i++)
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
