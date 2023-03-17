@@ -25,7 +25,7 @@ int main(void)
 
 	strcpy(m, "and is greater than 5");
 	strcpy(l, "and is 0");
-	strcpy(o, "and is less than 6 and is not 0");
+	strcpy(o, "and is less than 6 and not 0");
 	j = n % 10;
 	if (j > 5)
 		printf("Last digit of %d is %d %s\n", n, j, m);
