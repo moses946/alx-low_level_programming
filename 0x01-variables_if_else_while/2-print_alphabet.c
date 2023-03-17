@@ -9,13 +9,11 @@
 
 int main(void)
 {
-	char alphabet[27];
-	int i;
+	char a;
 
-	strcpy(alphabet, "abcdefghijklmnopqrstuvwxyz");
-	for (i = 0; i <= 27; i++)
+	for (a = 'a'; i <= 'z'; ++a)
 	{
-		putchar(alphabet[i]);
+		putchar(a);
 	}
 	putchar('\n');
 	return (0);
