@@ -16,5 +16,5 @@ int _islower(int c)
 		if ( c == k)
 		i = 1;
 	}
-	return (i)
+	return (i);
 }
