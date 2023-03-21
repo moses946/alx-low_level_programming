@@ -9,9 +9,16 @@ int print_sign(int n)
 	char c;
 
 	if (n < 0)
+	{
 		c = '-';
+	}
 	else if (n > 0)
+	{
 		c = '+';
+	}
 	else
+	{
 		c = '0';
+	}
+	return (c);
 }
