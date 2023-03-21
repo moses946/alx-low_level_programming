@@ -1,17 +1,21 @@
 #include "main.h"
 
 /**
-  * main - Entry Point
+  * main - Entry point
   * Description - Prints _putchar
   * Return: Always 0
   */
 int main(void)
 {
-	char c[] = "_putchar";
-	for( int i = 0; c[i] != '\0'; i++)
-	{
-		_putchar(char[i]);
-	}
-	_putchar("\n");
-	return (0);
+	 _putchar('_');
+   	 _putchar('p');
+   	 _putchar('u');
+   	 _putchar('t');
+    	 _putchar('c');
+     	 _putchar('h');
+	 _putchar('a');
+    	 _putchar('r');
+   	 _putchar('\n');
+   	
+	 return (0);
 }
