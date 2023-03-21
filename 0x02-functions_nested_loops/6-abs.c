@@ -1,15 +1,15 @@
 #include "main.h"
 /**
   * _abs - Computes the absolute value of an interger
-  * @int: integer to be evaluated
+  * @i: integer to be evaluated
   * Return: Absolute value of the number
   */
-int _abs(int)
+int _abs(int i)
 {
-	if (int < 0)
+	if (i < 0)
 	{
-		int  = int * -1;
+		i  = i * -1;
 	}
-	return (int)
+	return (i);
 }
 
