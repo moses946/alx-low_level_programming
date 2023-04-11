@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
   * main - Entry point
-  * @argc - number of arguments
-  * @argv - argument vector
+  * @argc: number of arguments
+  * @argv: argument vector
   * Return: Always 0
   */
 int main(int argc, char *argv[])
@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				a += atoi(argv[i]);			
+				a += atoi(argv[i]);
 			}
 		}
 	}
-	printf("%d\n",a);
+	printf("%d\n", a);
 	return (0);
 }

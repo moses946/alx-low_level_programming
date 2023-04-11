@@ -2,6 +2,8 @@
 #include <stdlib.h>
 /**
   * main - Entry point
+  * @argc: number of arguments
+  * @argv: arguments vector
   * Return: 0 if arguments passed are 2 else 1
   */
 int main(int argc, char *argv[])
