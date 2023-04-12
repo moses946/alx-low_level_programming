@@ -12,7 +12,7 @@ int _strlen(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{}
-	return (i);
+	return (i + 1);
 }
 /**
   * _strdup - copies a string given to it as a parameter
@@ -23,9 +23,12 @@ char *_strdup(char *str)
 {
 	int i;
 	char *nstr;
-
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	nstr = malloc(_strlen(str));
-	if (str == NULL || nstr == NULL)
+	if (nstr == NULL)
 	{
 		return (NULL);
 	}
