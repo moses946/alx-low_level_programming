@@ -21,7 +21,7 @@ int _strlen(char *s)
   */
 char *_strdup(char *str)
 {
-	long unsigned int i;
+	int i;
 	char *nstr;
 
 	nstr = malloc(_strlen(str));
