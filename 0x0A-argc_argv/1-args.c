@@ -7,6 +7,6 @@
   */
 int main(int argc, char *argv[])
 {
-	printf("%ld\n", (sizeof(argv[argc]) / 8) - 1);
+	printf("%ld\n", argc - (sizeof(argv[argc]) / 8));
 	return (0);
 }
