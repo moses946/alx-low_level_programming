@@ -50,7 +50,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (s1 == NULL)
 		{
-			con[i] = 32;
+			con[i] = '\0';
 			break;
 		}
 		while (s1)
@@ -63,7 +63,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (s2 == NULL)
 		{
-			con[i] = 32;
+			con[i] = '\0';
 			break;
 		}
 		while (s2)
