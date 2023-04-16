@@ -50,7 +50,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (s1 == NULL)
 		{
-			con[i] = '\0';
+			len1 = 0;
 			break;
 		}
 		while (s1)
@@ -59,19 +59,19 @@ char *str_concat(char *s1, char *s2)
 			break;
 		}
 	}
-	for (j = 0; j < len2; i++, j++)
+	for (j = 0; j < len2; len1++, j++)
 	{
 		while (s2 == NULL)
 		{
-			con[i] = '\0';
+			con[len1] = '\0';
 			break;
 		}
 		while (s2)
 		{
-			con[i] = s2[j];
+			con[len1] = s2[j];
 			break;
 		}
 	}
-	con[i + 1] = '\0';
+	con[len1] = '\0';
 	return (con);
 }
