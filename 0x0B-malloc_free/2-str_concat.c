@@ -23,30 +23,54 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *con;
-	int i, j;
+	int i, j, len1, len2;
 
-	con = malloc(_strlen(s1) + _strlen(s2) + 1);
+	while (!s1){
+    	len1 = 1;
+  	break;
+  	}
+  	while (!s2){
+    	len2 = 1;
+    	break;
+  	}
+  	while (s1){
+    	len1 = _strlen(s1);
+    	break;
+  	}
+  	while (s2){
+    	len2 = _strlen(s2);
+    	break;
+  	}
+	con = malloc(len1 + len2 + 1);
 	if (con == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < _strlen(s1); i++)
+	for (i = 0; i < len1; i++)
 	{
 		while (s1 == NULL)
 		{
 			con[i] = 32;
 			break;
 		}
-		con[i] = s1[i];
+		while (s1)
+		{
+			con[i] = s1[i];
+			break;
+		}
 	}
-	for (j = 0; j < _strlen(s2); i++, j++)
+	for (j = 0; j < len2; i++, j++)
 	{
 		while (s2 == NULL)
 		{
 			con[i] = 32;
 			break;
 		}
-		con[i] = s2[j];
+		while (s2)
+		{
+			con[i] = s2[j];
+			break;
+		}
 	}
 	con[i + 1] = '\0';
 	return (con);
