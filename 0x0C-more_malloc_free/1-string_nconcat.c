@@ -24,14 +24,14 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int i;
+	int i, j;
 
 	str = malloc(_strlen(s1) + n + 1);
 	if (str == NULL)
 		return (NULL);
-	for (i = 0, i < _strlen(s1); i++)
+	for (i = 0; i < _strlen(s1); i++)
 	{
-		while (s1 = NULL)
+		while (s1 == NULL)
 		{
 			str[i] = "";
 			break;
