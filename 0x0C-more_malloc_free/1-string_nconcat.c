@@ -15,6 +15,27 @@ int _strlen(char *s)
 	return (i);
 }
 /**
+	* get_len - gets length of string
+	* @s: string
+	* Return: len
+  */
+int get_len(char *s)
+{
+	int len;
+
+	while (!s)
+	{
+		len = 1;
+		break;
+	}
+	while (s)
+	{
+		len = _strlen(s);
+		break;
+	}
+	return (len);
+}
+/**
   * string_nconcat - concatenates two strings
   * @s1: string one
   * @s2: string two
@@ -24,30 +45,40 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int i;
+	int i, len1, len2;
 	unsigned int j;
 
-	str = malloc(_strlen(s1) + n + 1);
+	len1 = get_len(s1);
+	len2 = get_len(s2);
+	str = malloc(len1 + n + 1);
 	if (str == NULL)
 		return (NULL);
-	for (i = 0; i < _strlen(s1); i++)
+	for (i = 0; i < len1; i++)
 	{
 		while (s1 == NULL)
 		{
-			str[i] = 32;
+			len1 = 0;
 			break;
 		}
-		str[i] = s1[i];
+		while (s1)
+		{
+			con[i] = s1[i];
+			break;
+		}
 	}
-	for (j = 0; j < n; i++, j++)
+	for (j = 0; j < n; len1++, j++)
 	{
 		while (s2 == NULL)
 		{
-			str[i] = 32;
+			con[len1] = '\0';
 			break;
 		}
-		str[i] = s2[j];
+		while (s2)
+		{
+			con[len1] = s2[j];
+			break;
+		}
 	}
-	str[i + 1] = '\0';
+	str[len1] = '\0';
 	return (str);
 }
