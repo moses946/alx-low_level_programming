@@ -15,6 +15,27 @@ int _strlen(char *s)
 	return (i);
 }
 /**
+	* get_len - gets length of string
+	* @s: string
+	* Return: len
+  */
+int get_len(char *s)
+{
+	int len;
+
+	while (!s)
+	{
+		len = 1;
+		break;
+	}
+	while (s)
+	{
+		len = _strlen(s);
+		break;
+	}
+	return (len);
+}
+/**
   * str_concat - concatenates two strings
   * @s1:First string
   * @s2: Second string
@@ -25,22 +46,8 @@ char *str_concat(char *s1, char *s2)
 	char *con;
 	int i, j, len1, len2;
 
-	while (!s1){
-    	len1 = 1;
-  	break;
-  	}
-  	while (!s2){
-    	len2 = 1;
-    	break;
-  	}
-  	while (s1){
-    	len1 = _strlen(s1);
-    	break;
-  	}
-  	while (s2){
-    	len2 = _strlen(s2);
-    	break;
-  	}
+	len1 = get_len(s1);
+	len2 = get_len(s2);
 	con = malloc(len1 + len2 + 1);
 	if (con == NULL)
 	{
