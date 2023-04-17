@@ -1,4 +1,7 @@
-#include "main.h"
+#ifndef DOG_H
+#define DOG_H
+
+#include <stdio.h>
 /**
   * struct dog - A structure representing a dog
   * @name: Dog's name
@@ -12,4 +15,5 @@ typedef struct dog
 	char *name;
 	float age;
 	char *owner;
-}dog_t;
+} dog_t;
+#endif/*DOG_H*/
