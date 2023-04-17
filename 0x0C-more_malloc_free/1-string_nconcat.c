@@ -36,6 +36,20 @@ int get_len(char *s)
 	return (len);
 }
 /**
+	*comp - compares two int
+	* @a: First int
+	* @b: Second int
+	* Return: the main int
+*/
+void comp(unsigned int *a, unsigned int *b)
+{
+	while (a >= b)
+	{
+		a = b;
+		break;
+	}
+}
+/**
   * string_nconcat - concatenates two strings
   * @s1: string one
   * @s2: string two
@@ -50,11 +64,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = get_len(s1);
 	len2 = get_len(s2);
-	while (n >= len2)
-	{
-		n = len2;
-		break;
-	}
+	comp(&n, &len2);
 	str = malloc(len1 + n + 1);
 	if (str == NULL)
 		return (NULL);
