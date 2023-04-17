@@ -1,4 +1,5 @@
-#inlcude "main.h"
+#include "main.h"
+#include "dog.h"
 /**
   * init_dog - Initializes a varaiable of type dog
   * @d: the structure
