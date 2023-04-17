@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 #include "dog.h"
 /**
   * _strcpy - copies source string to dest string
