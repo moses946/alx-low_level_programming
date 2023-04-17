@@ -45,11 +45,16 @@ int get_len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int i, len1, len2;
-	unsigned int j;
+	int i, len1;
+	unsigned int j, len2;
 
 	len1 = get_len(s1);
 	len2 = get_len(s2);
+	while (n >= len2)
+	{
+		n = len2;
+		break;
+	}
 	str = malloc(len1 + n + 1);
 	if (str == NULL)
 		return (NULL);
@@ -62,7 +67,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		while (s1)
 		{
-			con[i] = s1[i];
+			str[i] = s1[i];
 			break;
 		}
 	}
@@ -70,12 +75,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		while (s2 == NULL)
 		{
-			con[len1] = '\0';
+			str[len1] = '\0';
 			break;
 		}
 		while (s2)
 		{
-			con[len1] = s2[j];
+			str[len1] = s2[j];
 			break;
 		}
 	}
