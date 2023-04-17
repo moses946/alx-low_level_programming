@@ -2,5 +2,5 @@
 #define _HEADER_
 
 #include <stdlib.h>
-#define ABS(x) (x * -1)? x<0 : x
+#define ABS(x) x < 0? x * -1 : x
 #endif
