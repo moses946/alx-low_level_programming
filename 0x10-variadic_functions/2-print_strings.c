@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
+  * _puts - prints a string
+  * @str: string to be printed
+  */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+}
+/**
   * print_strings - prints strings followed by a new line
   * @separator: char to separate the strings
   * @n: number of strings passed to the function
@@ -19,22 +32,42 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (separator != NULL)
 		{
 			if (string == NULL)
-				printf("%s%s ", "(nil)", separator);
+			{
+				_puts("(nil)");
+				_putchar(separator);
+				_putchar(" ");
+			}
 			else
-				printf("%s%s ", string, separator);
+			{
+				_puts(string);
+				_putchar(separator);
+				_putchar(" ");
+			}
 		}
 		else
 		{
 			if (string == NULL)
-				printf("%s ", "(nil)");
+			{
+				_puts("(nil)");
+				_putchar(" ");
+			}
 			else
-				printf("%s ", string);
+			{
+				_puts(string);
+				_putchar(" ");
+			}
 		}
 	}
 	string = va_arg(ptr, char*);
 	if (string == NULL)
-		printf("%s\n", "(nil)");
+	{
+		_puts("(nil)");
+		_putchar('\n');
+	}
 	else
-		printf("%s\n", string);
+	{
+		_puts(string);
+		_putchar('\n');
+	}
 }
 
