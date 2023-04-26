@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "vardiac_functions.h"
 #include <stdarg.h>
 /**
   * _puts - prints a string
