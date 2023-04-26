@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "vardiac_functions.h"
+#include "variadic_functions.h"
 /**
   * print_number - Prints an integer using _putchar
   * @n: Integer to be printed
