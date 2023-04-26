@@ -1,6 +1,6 @@
 #include "3-calc.h"
 /**
-  * get_op_func - Function that selects the correct function depending on the operation
+  * get_op_func - Function that selects the correct function
   * @s: The operator passed to the arguement
   *
   * Return: Pointer to a function
