@@ -2,6 +2,19 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
+  * _puts - prints a string
+  * @str: string to be printed
+  */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+}
+/**
   * print_number - Prints an integer using _putchar
   * @n: Integer to be printed
   *
@@ -36,7 +49,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator != NULL)
 		{
 			print_number(va_arg(ptr, int));
-			_putchar(separator);
+			_puts(separator);
 			_putchar(' ');
 		}
 		else

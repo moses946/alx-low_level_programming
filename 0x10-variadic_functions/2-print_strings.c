@@ -35,13 +35,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (string == NULL)
 			{
 				_puts("(nil)");
-				_putchar(separator);
+				_puts(separator);
 				_putchar(" ");
 			}
 			else
 			{
 				_puts(string);
-				_putchar(separator);
+				_puts(separator);
 				_putchar(" ");
 			}
 		}
