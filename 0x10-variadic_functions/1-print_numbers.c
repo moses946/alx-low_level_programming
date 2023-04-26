@@ -41,6 +41,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list ptr;
+	char *separate = separator;
 
 	va_start(ptr, n);
 
@@ -49,7 +50,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator != NULL)
 		{
 			print_number(va_arg(ptr, int));
-			_puts(separator);
+			_puts(separate);
 			_putchar(' ');
 		}
 		else

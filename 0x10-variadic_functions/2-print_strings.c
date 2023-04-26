@@ -22,7 +22,7 @@ void _puts(char *str)
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	char *string;
+	char *string, *separate = separator;
 	va_list ptr;
 
 	va_start(ptr, n);
@@ -35,13 +35,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (string == NULL)
 			{
 				_puts("(nil)");
-				_puts(separator);
+				_puts(separate);
 				_putchar(' ');
 			}
 			else
 			{
 				_puts(string);
-				_puts(separator);
+				_puts(separate);
 				_putchar(' ');
 			}
 		}
