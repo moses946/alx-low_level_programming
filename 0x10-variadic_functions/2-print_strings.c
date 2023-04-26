@@ -2,6 +2,19 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
+  * _puts - prints a string
+  * @str: string to be printed
+  */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+}
+/**
   * print_strings - prints strings followed by a new line
   * @separator: char to separate the strings
   * @n: number of strings passed to the function
