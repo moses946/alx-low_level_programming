@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error\n");
+		_puts("Error\n");
 		exit(98);
 	}
 
@@ -25,19 +25,19 @@ int main(int argc, char **argv)
 
 	if (op_func == NULL)
 	{
-		printf("Error null\n");
+		_puts("Error null\n");
 		exit(99);
 	}
 
 	if ((*(argv[2]) == '/' || *(argv[2]) == '%') && b == 0)
 	{
-		printf("Error\n");
+		_puts("Error\n");
 		exit(100);
 	}
 
 	result = op_func(a, b);
 
-	printf("%d\n", result);
+	print_number(result);
 
 	return (0);
 }
