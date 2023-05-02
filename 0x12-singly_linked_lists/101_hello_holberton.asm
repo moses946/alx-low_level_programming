@@ -1,4 +1,4 @@
-	.file	"assembly.c"
+	.file	"ass.c"
 	.text
 	.section	.rodata
 .LC0:
