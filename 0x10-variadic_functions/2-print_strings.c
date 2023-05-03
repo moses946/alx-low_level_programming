@@ -36,13 +36,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				_puts("(nil)");
 				_puts(separator);
-				_putchar(' ');
 			}
 			else
 			{
 				_puts(string);
 				_puts(separator);
-				_putchar(' ');
 			}
 		}
 		else
@@ -50,12 +48,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (string == NULL)
 			{
 				_puts("(nil)");
-				_putchar(' ');
 			}
 			else
 			{
 				_puts(string);
-				_putchar(' ');
 			}
 		}
 	}

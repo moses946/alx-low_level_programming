@@ -50,12 +50,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			print_number(va_arg(ptr, int));
 			_puts(separator);
-			_putchar(' ');
 		}
 		else
 		{
 			print_number(va_arg(ptr, int));
-			_putchar(' ');
 		}
 	}
 	print_number(va_arg(ptr, int));
