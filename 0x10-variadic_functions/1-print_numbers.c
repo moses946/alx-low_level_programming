@@ -44,6 +44,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	
 	va_start(ptr, n);
 
+	if (n < 1)
+	{
+		_putchar(' ');
+		return;
+	}
 	for (i = 0; i < n - 1; i++)
 	{
 		if (separator != NULL)
