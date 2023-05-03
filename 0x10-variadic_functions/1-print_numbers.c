@@ -5,7 +5,7 @@
   * _puts - prints a string
   * @str: string to be printed
   */
-void _puts(char *str)
+void _puts(const char *str)
 {
 	int i;
 
@@ -41,8 +41,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list ptr;
-	char *separate = separator;
-
+	
 	va_start(ptr, n);
 
 	for (i = 0; i < n; i++)
@@ -50,7 +49,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator != NULL)
 		{
 			print_number(va_arg(ptr, int));
-			_puts(separate);
+			_puts(separator);
 			_putchar(' ');
 		}
 		else

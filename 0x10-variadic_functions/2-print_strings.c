@@ -5,7 +5,7 @@
   * _puts - prints a string
   * @str: string to be printed
   */
-void _puts(char *str)
+void _puts(const char *str)
 {
 	int i;
 
@@ -22,7 +22,7 @@ void _puts(char *str)
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	char *string, *separate = separator;
+	const char *string;
 	va_list ptr;
 
 	va_start(ptr, n);
@@ -35,13 +35,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (string == NULL)
 			{
 				_puts("(nil)");
-				_puts(separate);
+				_puts(separator);
 				_putchar(' ');
 			}
 			else
 			{
 				_puts(string);
-				_puts(separate);
+				_puts(separator);
 				_putchar(' ');
 			}
 		}
