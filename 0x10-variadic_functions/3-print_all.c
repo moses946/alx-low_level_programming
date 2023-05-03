@@ -8,31 +8,30 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	va_start(args, format);
-
 	char c;
-	int i;
+	int i, k = 0;
 	float f;
 	char *s;
 
-	while (*format)
+	va_start(args, format);
+	while (format[k])
 	{
-		if (*format == 'c')
+		if (format[k] == 'c')
 		{
 			c = va_arg(args, int);
 			printf("%c", c);
 		}
-		else if (*format == 'i')
+		else if (format[k] == 'i')
 		{
 			i = va_arg(args, int);
 			printf("%d", i);
 		}
-		else if (*format == 'f')
+		else if (format[k] == 'f')
 		{
 			f = va_arg(args, double);
 			printf("%f", f);
 		}
-		else if (*format == 's')
+		else if (format[k] == 's')
 		{
 			s = va_arg(args, char *);
 			if (s == NULL)
@@ -44,8 +43,8 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 			}
 		}
-		format++;
-		if (*format)
+		k++;
+		if (format[k])
 		{
 			printf(", ");
 		}
