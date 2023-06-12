@@ -2,6 +2,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+  * _strlen - Returns the length of a string
+  * @str: String
+  *
+  * Return: Length of string given in parameters
+  */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (*str != '\0')
+	{
+		i++;
+		str++;
+	}
+	return (i);
+}
+/**
   * _strdup - Duplicates a string
   * @str: String to be duplicated
   *

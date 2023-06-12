@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+  * _strlen - Returns the length of a string
+  * @str: String
+  *
+  * Return: Length of string given in parameters
+  */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (*str != '\0')
+	{
+		i++;
+		str++;
+	}
+	return (i);
+}
+/**
   * str_concat - Concatenates two strings
   * @s1: First string
   * @s2: Second string
