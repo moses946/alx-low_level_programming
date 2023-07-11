@@ -1,34 +1,39 @@
-#include "main.h"
+/*
+ * File: 3-strspn.c
+ * Auth: Brennan D Baraban
+ */
+
+#include "holberton.h"
+
 /**
-  * _strspn - gets the length of a prefixed substring
-  * @s: main string
-  * @accept: prefixed substring
-  * Return: number of bytes
-  */
+ * _strspn - Gets the length of a prefix substring.
+ * @s: The string to be searched.
+ * @accept: The prefix to be measured.
+ *
+ * Return: The number of bytes in s which
+ *         consist only of bytes from accept.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count;
-	int found;
-	char *p;
+	unsigned int bytes = 0;
+	int index;
 
-	found = 1;
-	count = 0;
-	for (; *s; s++)
+	while (*s)
 	{
-		found = 0;
-		for (p = accept; *p; p++)
+		for (index = 0; accept[index]; index++)
 		{
-			if (*s == *p)
+			if (*s == accept[index])
 			{
-				found = 1;
+				bytes++;
 				break;
 			}
+
+			else if (accept[index + 1] == '\0')
+				return (bytes);
 		}
-		if (!found)
-		{
-			break;
-		}
-		count++;
+
+		s++;
 	}
-	return (count);
+
+	return (bytes);
 }

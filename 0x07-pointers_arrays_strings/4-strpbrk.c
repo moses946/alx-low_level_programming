@@ -1,26 +1,32 @@
-#include "main.h"
+/*
+ * File: 4-strpbrk.c
+ * Auth: Brennan D Baraban
+ */
+
+#include "holberton.h"
+
 /**
-  * _strpbrk - searches a string for any set of bytes
-  * @s: main string
-  * @accept: set of bytes
-  * Return: pointer to bytes in s that matches accept
-  */
+ * _strpbrk - Searches a string for any of a set of bytes.
+ * @s: The string to be searched.
+ * @accept: The set of bytes to be searched for.
+ *
+ * Return: If a set is matched - a pointer to the matched byte.
+ *         If no set is matched - NULL.
+ */
 char *_strpbrk(char *s, char *accept)
 {
-	char *a;
+	int index;
 
-	while (*s != '\0')
+	while (*s)
 	{
-		a = accept;
-		while (*a != '\0')
+		for (index = 0; accept[index]; index++)
 		{
-			if (*s == *a)
-			{
+			if (*s == accept[index])
 				return (s);
-			}
-			a++;
 		}
+
 		s++;
 	}
-	return (NULL);
+
+	return ('\0');
 }
