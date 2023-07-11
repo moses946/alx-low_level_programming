@@ -1,19 +1,23 @@
-#include "main.h"
+/*
+ * File: 6-puts2.c
+ * Auth: Brennan D Baraban
+ */
+
+#include "holberton.h"
+
 /**
-  * puts2 - Prints every other character of a string
-  * @str: string under evaluation
-  */
+ * puts2 - Prints one char out of two of a string.
+ * @str: The string containing characters.
+ */
 void puts2(char *str)
 {
-	int i;
-	int j;
+	int index = 0, len = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
-	{}
-	for (j = 0; j < i; j++)
-	{
-		if (j % 2 == 0)
-		_putchar(str[j]);
-	}
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
 	_putchar('\n');
 }
