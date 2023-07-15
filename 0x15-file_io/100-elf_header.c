@@ -117,7 +117,7 @@ void print_elfHeader(Elf64_Ehdr header)
 			printf("NONE (Unknown type)\n");
 			break;
 	}
-	printf("  Entry point address:               0x%lx\n", header.e_entry);
+	printf("  Entry point address:               %#lx\n", header.e_entry);
 }
 
 /**
