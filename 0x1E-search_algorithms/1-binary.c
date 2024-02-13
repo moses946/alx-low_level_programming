@@ -13,26 +13,26 @@
 int searcher(int *array, int lo, int hi, int val)
 {
 	int mid = (lo + hi) / 2;
-  int i = lo;
+	int i = lo;
 
 	if (!array || lo > hi)
-		return -1;
-  
-  printf("Searching in array: ");
-  while(i < hi)
-  {
-    printf("%d ",array[i]);
-    i++;
-  }
-  printf("%d\n",array[i]);
+		return (-1);
+
+	printf("Searching in array: ");
+	while (i < hi)
+	{
+		printf("%d, ", array[i]);
+		i++;
+	}
+	printf("%d\n", array[i]);
 	if (array[mid] == val)
-		return mid;
+		return (mid);
 	else if (array[mid] < val)
-		return searcher(array, mid + 1, hi, val);
+		return (searcher(array, mid + 1, hi, val));
 	else if (array[mid] > val)
-		return searcher(array, lo, mid - 1, val);
+		return (searcher(array, lo, mid - 1, val));
 	else
-		return -1;
+		return (-1);
 }
 
 /**
@@ -48,6 +48,6 @@ int searcher(int *array, int lo, int hi, int val)
 int binary_search(int *array, size_t size, int value)
 {
 	if (!array)
-		return -1;
-	return searcher(array, 0, size - 1, value);
+		return (-1);
+	return (searcher(array, 0, size - 1, value));
 }
